@@ -8,6 +8,7 @@ import SoilManagementPage from '../pages/dashboard/SoilManagementPage'
 import WaterAnalysisPage from '../pages/dashboard/WaterAnalysisPage'
 import AnalysisHistoryPage from '../pages/dashboard/AnalysisHistoryPage'
 import StatisticsPage from '../pages/dashboard/StatisticsPage'
+import SettingsPage from '../pages/dashboard/SettingsPage'
 import HomePage from '../pages/public/HomePage'
 import ProductsPage from '../pages/public/ProductsPage'
 import AboutPage from '../pages/public/AboutPage'
@@ -33,6 +34,7 @@ function AppRoutes() {
         <Route path="/dashboard/analysis" element={<WaterAnalysisPage />} />
         <Route path="/dashboard/history" element={<AnalysisHistoryPage />} />
         <Route path="/dashboard/statistics" element={<StatisticsPage />} />
+        <Route path="/dashboard/settings" element={<SettingsPage />} />
         <Route path="*" element={<PlaceholderPage title="Page not found" />} />
       </Route>
     </Routes>

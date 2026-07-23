@@ -4,23 +4,23 @@ import { motion } from 'framer-motion'
 import { Button } from '../ui'
 
 function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false)
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof window === 'undefined') return false
 
-  useEffect(() => {
     const storedTheme = window.localStorage.getItem('waterwind-theme')
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const nextTheme = storedTheme ?? (prefersDark ? 'dark' : 'light')
-    const shouldDark = nextTheme === 'dark'
+    return (storedTheme ?? (prefersDark ? 'dark' : 'light')) === 'dark'
+  })
 
-    setIsDark(shouldDark)
+  useEffect(() => {
+    const shouldDark = isDark
     document.documentElement.classList.toggle('dark', shouldDark)
-  }, [])
+    document.documentElement.style.colorScheme = shouldDark ? 'dark' : 'light'
+    window.localStorage.setItem('waterwind-theme', shouldDark ? 'dark' : 'light')
+  }, [isDark])
 
   const toggleTheme = () => {
-    const nextTheme = !isDark
-    setIsDark(nextTheme)
-    document.documentElement.classList.toggle('dark', nextTheme)
-    window.localStorage.setItem('waterwind-theme', nextTheme ? 'dark' : 'light')
+    setIsDark((current) => !current)
   }
 
   return (

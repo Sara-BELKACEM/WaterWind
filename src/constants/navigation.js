@@ -17,7 +17,6 @@ export const publicLinks = [
   { label: 'About', path: '/about', icon: Users },
   { label: 'Products', path: '/products', icon: PackageSearch },
   { label: 'Contact', path: '/contact', icon: Mail },
-  { label: 'Login', path: '/login', icon: LogIn },
 ]
 
 export const dashboardLinks = [
