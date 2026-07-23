@@ -1,9 +1,11 @@
 import { useMemo } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { ChevronsLeft, ChevronsRight, Droplets, LogOut, Settings, Sparkles, X } from 'lucide-react'
 import { dashboardLinks } from '../../constants/navigation'
 import SidebarItem from '../navigation/SidebarItem'
 
 function Sidebar({ collapsed = false, mobile = false, onClose, onToggle }) {
+  const navigate = useNavigate()
   const items = useMemo(
     () =>
       dashboardLinks.map((item) => ({
@@ -12,6 +14,10 @@ function Sidebar({ collapsed = false, mobile = false, onClose, onToggle }) {
       })),
     [],
   )
+
+  const handleLogout = () => {
+    navigate('/')
+  }
 
   return (
     <aside
@@ -78,13 +84,19 @@ function Sidebar({ collapsed = false, mobile = false, onClose, onToggle }) {
           collapsed={collapsed}
           onNavigate={onClose}
         />
-        <SidebarItem
-          label="Logout"
-          path="/dashboard/logout"
-          icon={LogOut}
-          collapsed={collapsed}
-          onNavigate={onClose}
-        />
+        <button
+          type="button"
+          onClick={() => {
+            onClose?.()
+            handleLogout()
+          }}
+          className="flex w-full items-center gap-3 rounded-[20px] px-3 py-3 text-left text-sm font-medium text-slate-600 transition hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+        >
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+            <LogOut size={17} />
+          </span>
+          <span className="flex-1">Logout</span>
+        </button>
 
         <div className="rounded-[20px] bg-gradient-to-r from-emerald-50 to-sky-50 p-3 text-xs text-slate-700 dark:from-emerald-950/50 dark:to-sky-950/50 dark:text-slate-100">
           <div className="mb-2 flex items-center gap-2 font-semibold">

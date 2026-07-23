@@ -6,10 +6,12 @@ import DashboardHomePage from '../pages/dashboard/DashboardHomePage'
 import CropManagementPage from '../pages/dashboard/CropManagementPage'
 import SoilManagementPage from '../pages/dashboard/SoilManagementPage'
 import WaterAnalysisPage from '../pages/dashboard/WaterAnalysisPage'
+import AnalysisHistoryPage from '../pages/dashboard/AnalysisHistoryPage'
 import HomePage from '../pages/public/HomePage'
 import ProductsPage from '../pages/public/ProductsPage'
 import AboutPage from '../pages/public/AboutPage'
 import ContactPage from '../pages/public/ContactPage'
+import LoginPage from '../pages/public/LoginPage'
 
 const publicRoutes = [
   { path: '/', title: 'Home' },
@@ -36,6 +38,7 @@ function AppRoutes() {
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/login" element={<LoginPage />} />
         {publicRoutes
           .filter((route) => route.path !== '/' && route.path !== '/products' && route.path !== '/about' && route.path !== '/contact')
           .map((route) => (
@@ -52,6 +55,7 @@ function AppRoutes() {
         <Route path="/dashboard/crops" element={<CropManagementPage />} />
         <Route path="/dashboard/soils" element={<SoilManagementPage />} />
         <Route path="/dashboard/analysis" element={<WaterAnalysisPage />} />
+        <Route path="/dashboard/history" element={<AnalysisHistoryPage />} />
         {dashboardRoutes
           .filter((route) => route.path !== '/dashboard' && route.path !== '/dashboard/crops' && route.path !== '/dashboard/soils' && route.path !== '/dashboard/analysis')
           .map((route) => (

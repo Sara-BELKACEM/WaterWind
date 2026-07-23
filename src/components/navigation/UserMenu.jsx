@@ -1,7 +1,13 @@
 import { ChevronDown, LogOut, Settings, ShieldCheck } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 import { Button } from '../ui'
 
 function UserMenu() {
+  const navigate = useNavigate()
+
+  const handleLogout = () => {
+    navigate('/')
+  }
   return (
     <div className="flex items-center gap-3 rounded-[20px] border border-slate-200/80 bg-white/70 p-2 shadow-sm backdrop-blur dark:border-slate-700 dark:bg-slate-900/70">
       <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-sky-500 text-sm font-bold text-white">
@@ -27,7 +33,7 @@ function UserMenu() {
         <Button variant="ghost" aria-label="Open settings" className="rounded-xl p-2">
           <Settings size={16} />
         </Button>
-        <Button variant="ghost" aria-label="Log out" className="rounded-xl p-2">
+        <Button variant="ghost" aria-label="Log out" className="rounded-xl p-2" onClick={handleLogout}>
           <LogOut size={16} />
         </Button>
       </div>
