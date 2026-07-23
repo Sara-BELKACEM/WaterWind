@@ -10,11 +10,11 @@ function ProfileSettings() {
           AO
         </div>
         <div className="flex-1">
-          <p className="text-lg font-semibold text-slate-950 dark:text-white">Amina Omar</p>
-          <p className="text-sm text-slate-600 dark:text-slate-300">Administrator • Operations Lead</p>
+          <p className="text-lg font-semibold text-slate-950 dark:text-white">Omar Admin</p>
+          <p className="text-sm text-slate-600 dark:text-slate-300">Administrator • Platform Lead</p>
           <div className="mt-3 flex flex-wrap gap-2 text-sm text-slate-500 dark:text-slate-400">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 dark:bg-slate-800/70"><Mail size={14} /> a.omar@waterwind.io</span>
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 dark:bg-slate-800/70"><Building2 size={14} /> North Hills Farm</span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 dark:bg-slate-800/70"><Mail size={14} /> omar@waterwind.io</span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 dark:bg-slate-800/70"><Building2 size={14} /> WaterWind HQ</span>
           </div>
         </div>
         <Button variant="outline" className="rounded-[18px]">
@@ -24,11 +24,11 @@ function ProfileSettings() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
-        <Input label="Full Name" defaultValue="Amina Omar" />
-        <Input label="Email" type="email" defaultValue="a.omar@waterwind.io" />
+        <Input label="Full Name" defaultValue="Omar Admin" />
+        <Input label="Email" type="email" defaultValue="omar@waterwind.io" />
         <Input label="Phone Number" defaultValue="+1 555 0147" />
-        <Input label="Company" defaultValue="North Hills Farm" />
-        <Input label="Department" defaultValue="Operations" />
+        <Input label="Company" defaultValue="WaterWind HQ" />
+        <Input label="Department" defaultValue="Platform Operations" />
       </div>
 
       <div className="flex flex-wrap gap-2">
