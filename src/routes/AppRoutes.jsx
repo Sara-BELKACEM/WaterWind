@@ -7,28 +7,12 @@ import CropManagementPage from '../pages/dashboard/CropManagementPage'
 import SoilManagementPage from '../pages/dashboard/SoilManagementPage'
 import WaterAnalysisPage from '../pages/dashboard/WaterAnalysisPage'
 import AnalysisHistoryPage from '../pages/dashboard/AnalysisHistoryPage'
+import StatisticsPage from '../pages/dashboard/StatisticsPage'
 import HomePage from '../pages/public/HomePage'
 import ProductsPage from '../pages/public/ProductsPage'
 import AboutPage from '../pages/public/AboutPage'
 import ContactPage from '../pages/public/ContactPage'
 import LoginPage from '../pages/public/LoginPage'
-
-const publicRoutes = [
-  { path: '/', title: 'Home' },
-  { path: '/about', title: 'About' },
-  { path: '/products', title: 'Products' },
-  { path: '/contact', title: 'Contact' },
-  { path: '/login', title: 'Login' },
-]
-
-const dashboardRoutes = [
-  { path: '/dashboard', title: 'Dashboard' },
-  { path: '/dashboard/crops', title: 'Crops' },
-  { path: '/dashboard/soils', title: 'Soils' },
-  { path: '/dashboard/analysis', title: 'Analysis' },
-  { path: '/dashboard/history', title: 'History' },
-  { path: '/dashboard/statistics', title: 'Statistics' },
-]
 
 function AppRoutes() {
   return (
@@ -39,15 +23,7 @@ function AppRoutes() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/login" element={<LoginPage />} />
-        {publicRoutes
-          .filter((route) => route.path !== '/' && route.path !== '/products' && route.path !== '/about' && route.path !== '/contact')
-          .map((route) => (
-            <Route
-              key={route.path}
-              path={route.path}
-              element={<PlaceholderPage title={route.title} />}
-            />
-          ))}
+        <Route path="*" element={<PlaceholderPage title="Page not found" />} />
       </Route>
 
       <Route element={<DashboardLayout />}>
@@ -56,15 +32,8 @@ function AppRoutes() {
         <Route path="/dashboard/soils" element={<SoilManagementPage />} />
         <Route path="/dashboard/analysis" element={<WaterAnalysisPage />} />
         <Route path="/dashboard/history" element={<AnalysisHistoryPage />} />
-        {dashboardRoutes
-          .filter((route) => route.path !== '/dashboard' && route.path !== '/dashboard/crops' && route.path !== '/dashboard/soils' && route.path !== '/dashboard/analysis')
-          .map((route) => (
-            <Route
-              key={route.path}
-              path={route.path}
-              element={<PlaceholderPage title={route.title} />}
-            />
-          ))}
+        <Route path="/dashboard/statistics" element={<StatisticsPage />} />
+        <Route path="*" element={<PlaceholderPage title="Page not found" />} />
       </Route>
     </Routes>
   )
