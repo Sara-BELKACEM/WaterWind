@@ -36,10 +36,8 @@ function CropToolbar({
             className="w-full rounded-[18px] border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none dark:border-slate-700 dark:bg-slate-800"
           >
             <option value="all">All devices</option>
-            <option value="AquaPulse">AquaPulse</option>
-            <option value="DripSmart">DripSmart</option>
-            <option value="FlowSense">FlowSense</option>
-            <option value="SoilJet">SoilJet</option>
+            <option value="WaterWind Micro">WaterWind Micro</option>
+            <option value="WaterWind Pro">WaterWind Pro</option>
           </select>
         </label>
 

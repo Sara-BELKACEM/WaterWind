@@ -42,13 +42,13 @@ function ContactCards() {
                 transition={{ delay: index * 0.05 }}
                 whileHover={{ y: -6 }}
               >
-                <Card className="relative h-full overflow-hidden rounded-[24px] border border-transparent bg-[linear-gradient(white,white)] p-6 shadow-[0_12px_40px_rgba(15,23,42,0.07)] before:absolute before:inset-0 before:rounded-[24px] before:bg-[linear-gradient(135deg,rgba(16,185,129,0.25),rgba(14,165,233,0.18))] before:p-[1px] before:[mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[mask-composite:xor] before:[mask-composite:exclude]">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600">
+                <Card className="relative h-full overflow-hidden rounded-[24px] border border-transparent bg-[linear-gradient(white,white)] p-6 shadow-[0_12px_40px_rgba(15,23,42,0.07)] before:absolute before:inset-0 before:rounded-[24px] before:bg-[linear-gradient(135deg,rgba(16,185,129,0.25),rgba(14,165,233,0.18))] before:p-[1px] before:[mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[mask-composite:xor] before:[mask-composite:exclude] dark:bg-slate-900/90 dark:before:from-emerald-400/30 dark:before:to-sky-400/20">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-300">
                     <Icon size={18} />
                   </div>
-                  <h3 className="mt-4 text-lg font-semibold text-slate-950">{card.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">{card.description}</p>
-                  <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-sky-600">
+                  <h3 className="mt-4 text-lg font-semibold text-slate-950 dark:text-white">{card.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">{card.description}</p>
+                  <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-sky-600 dark:text-sky-300">
                     Learn more
                     <ArrowRight size={14} />
                   </div>

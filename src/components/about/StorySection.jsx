@@ -7,22 +7,22 @@ function StorySection() {
     <section className="py-20">
       <Container className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <motion.div initial={{ opacity: 0, scale: 0.96 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, amount: 0.3 }}>
-          <Card className="rounded-[32px] bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.08)]">
+          <Card className="rounded-[32px] bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.08)] dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-[24px] bg-slate-950 p-6 text-white">
+              <div className="rounded-[24px] bg-slate-950 p-6 text-white dark:bg-slate-800">
                 <Droplets size={28} className="text-emerald-300" />
                 <p className="mt-4 text-3xl font-semibold">20L</p>
                 <p className="text-sm text-slate-300">compact water generation</p>
               </div>
-              <div className="rounded-[24px] bg-white p-6 shadow-sm">
+              <div className="rounded-[24px] bg-white p-6 shadow-sm dark:bg-slate-800/80 dark:text-slate-100">
                 <Wind size={28} className="text-sky-500" />
-                <p className="mt-4 text-3xl font-semibold">Renewable</p>
-                <p className="text-sm text-slate-500">solar and wind powered</p>
+                <p className="mt-4 text-3xl font-semibold dark:text-white">Renewable</p>
+                <p className="text-sm text-slate-500 dark:text-slate-300">solar and wind powered</p>
               </div>
-              <div className="rounded-[24px] bg-white p-6 shadow-sm sm:col-span-2">
+              <div className="rounded-[24px] bg-white p-6 shadow-sm sm:col-span-2 dark:bg-slate-800/80 dark:text-slate-100">
                 <Leaf size={28} className="text-emerald-500" />
-                <p className="mt-4 text-xl font-semibold">Smart irrigation guidance</p>
-                <p className="text-sm text-slate-500">Supporting better crop decisions with clear, practical recommendations.</p>
+                <p className="mt-4 text-xl font-semibold dark:text-white">Smart irrigation guidance</p>
+                <p className="text-sm text-slate-500 dark:text-slate-300">Supporting better crop decisions with clear, practical recommendations.</p>
               </div>
             </div>
           </Card>

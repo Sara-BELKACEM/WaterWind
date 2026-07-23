@@ -16,14 +16,14 @@ function ContactHero() {
           transition={{ duration: 0.55 }}
           className="mx-auto max-w-3xl text-center"
         >
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-sm font-semibold text-emerald-700 shadow-[0_8px_30px_rgba(15,23,42,0.08)] backdrop-blur">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-sm font-semibold text-emerald-700 shadow-[0_8px_30px_rgba(15,23,42,0.08)] backdrop-blur dark:bg-slate-900/80 dark:text-emerald-300">
             <Droplets size={15} />
             Contact WaterWind
           </div>
-          <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-950 md:text-6xl">
+          <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-950 dark:text-white md:text-6xl">
             Get In Touch
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-600">
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
             Have questions about WaterWind? We’d love to hear from you and help you find the best solution for your agricultural needs.
           </p>
         </motion.div>

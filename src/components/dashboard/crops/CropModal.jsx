@@ -68,12 +68,19 @@ function CropModal({ isOpen, onClose, mode = 'add', defaultValues, onSave }) {
                   {...register('recommendedPh', { required: 'Recommended pH is required' })}
                   error={errors.recommendedPh?.message}
                 />
-                <Input
-                  label="Recommended Device"
-                  placeholder="AquaPulse"
-                  {...register('recommendedDevice', { required: 'Recommended device is required' })}
-                  error={errors.recommendedDevice?.message}
-                />
+                <label className="block">
+                  <span className="mb-2 block text-sm font-medium text-slate-700 dark:text-slate-200">Recommended Device</span>
+                  <select
+                    {...register('recommendedDevice', { required: 'Recommended device is required' })}
+                    className="w-full rounded-[18px] border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none dark:border-slate-700 dark:bg-slate-800"
+                  >
+                    <option value="WaterWind Micro">WaterWind Micro</option>
+                    <option value="WaterWind Pro">WaterWind Pro</option>
+                  </select>
+                  {errors.recommendedDevice?.message ? (
+                    <p className="mt-2 text-sm text-rose-500">{errors.recommendedDevice.message}</p>
+                  ) : null}
+                </label>
               </div>
 
               <div className="grid gap-4 md:grid-cols-2">

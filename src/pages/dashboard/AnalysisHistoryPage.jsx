@@ -14,7 +14,7 @@ import { Button } from '../../components/ui'
 const mockAnalyses = Array.from({ length: 24 }, (_, index) => {
   const crops = ['Tomato', 'Maize', 'Rice', 'Wheat', 'Carrot']
   const soils = ['Loamy', 'Clay', 'Silty', 'Sandy']
-  const devices = ['AquaPulse', 'DripSmart', 'FlowSense', 'SoilJet']
+  const devices = ['WaterWind Micro', 'WaterWind Pro']
   const statuses = ['Completed', 'Pending', 'Archived']
   const waterTypes = ['Balanced Drip', 'High Saturation', 'Low Pulse', 'Adaptive Flow']
   const crop = crops[index % crops.length]
@@ -131,7 +131,7 @@ function AnalysisHistoryPage() {
 
     const topCrop = Object.entries(cropFrequency).sort((left, right) => right[1] - left[1])[0]?.[0] ?? 'Tomato'
     const topSoil = Object.entries(soilFrequency).sort((left, right) => right[1] - left[1])[0]?.[0] ?? 'Loamy'
-    const topDevice = Object.entries(deviceFrequency).sort((left, right) => right[1] - left[1])[0]?.[0] ?? 'AquaPulse'
+    const topDevice = Object.entries(deviceFrequency).sort((left, right) => right[1] - left[1])[0]?.[0] ?? 'WaterWind Micro'
 
     return [
       { label: 'Most Analyzed Crop', value: topCrop },

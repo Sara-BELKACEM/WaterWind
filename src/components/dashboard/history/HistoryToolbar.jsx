@@ -59,10 +59,8 @@ function HistoryToolbar({
           className="rounded-[18px] border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-700 outline-none focus:border-emerald-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
         >
           <option value="all">All devices</option>
-          <option value="AquaPulse">AquaPulse</option>
-          <option value="DripSmart">DripSmart</option>
-          <option value="FlowSense">FlowSense</option>
-          <option value="SoilJet">SoilJet</option>
+          <option value="WaterWind Micro">WaterWind Micro</option>
+          <option value="WaterWind Pro">WaterWind Pro</option>
         </select>
       </div>
 

@@ -28,12 +28,12 @@ function Benefits() {
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ delay: index * 0.05 }}
               >
-                <Card className="h-full rounded-[24px] bg-white/80">
+                <Card className="h-full rounded-[24px] bg-white/80 dark:bg-slate-900/80">
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-500 text-white">
                     <Icon size={18} />
                   </div>
-                  <h3 className="mt-4 text-lg font-semibold text-slate-900">{benefit.title}</h3>
-                  <p className="mt-2 text-sm text-slate-600">{benefit.description}</p>
+                  <h3 className="mt-4 text-lg font-semibold text-slate-900 dark:text-white">{benefit.title}</h3>
+                  <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{benefit.description}</p>
                 </Card>
               </motion.div>
             )

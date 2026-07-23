@@ -12,7 +12,7 @@ function AboutCTA() {
               WaterWind brings together renewable water generation and intelligent guidance for stronger agricultural resilience.
             </p>
             <div className="mt-6 flex justify-center">
-              <Button variant="primary">
+              <Button variant="primary" className="!bg-white !text-emerald-700 hover:!bg-slate-100">
                 Get Started
                 <ArrowRight size={15} />
               </Button>

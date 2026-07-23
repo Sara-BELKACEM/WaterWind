@@ -13,22 +13,22 @@ function ComparisonTable() {
   return (
     <section className="py-20">
       <Container>
-        <Card className="overflow-hidden rounded-[28px]">
+        <Card className="overflow-hidden rounded-[28px] dark:bg-slate-900/90">
           <div className="overflow-x-auto">
             <table className="min-w-full text-left text-sm">
               <thead>
-                <tr className="bg-slate-950 text-white">
+                <tr className="bg-slate-950 text-white dark:bg-slate-800">
                   <th className="px-4 py-4 font-medium">Feature</th>
                   <th className="px-4 py-4 font-medium">WaterWind Micro</th>
-                  <th className="px-4 py-4 font-medium bg-sky-500/20">WaterWind Pro</th>
+                  <th className="px-4 py-4 font-medium bg-sky-500/20 dark:bg-sky-500/15">WaterWind Pro</th>
                 </tr>
               </thead>
               <tbody>
                 {rows.map((row) => (
-                  <tr key={row.feature} className="border-b border-slate-200 last:border-b-0">
-                    <td className="px-4 py-4 font-semibold text-slate-800">{row.feature}</td>
-                    <td className="px-4 py-4 text-slate-600">{row.micro}</td>
-                    <td className="px-4 py-4 text-slate-600 bg-sky-50/60">{row.pro}</td>
+                  <tr key={row.feature} className="border-b border-slate-200 last:border-b-0 dark:border-slate-800">
+                    <td className="px-4 py-4 font-semibold text-slate-800 dark:text-slate-100">{row.feature}</td>
+                    <td className="px-4 py-4 text-slate-600 dark:text-slate-300">{row.micro}</td>
+                    <td className="px-4 py-4 bg-sky-50/60 text-slate-600 dark:bg-sky-950/30 dark:text-slate-200">{row.pro}</td>
                   </tr>
                 ))}
               </tbody>

@@ -12,8 +12,8 @@ function ProductsCTA() {
               Match your crop, soil, and operational scale with the model that fits your farm’s water strategy today.
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-              <Button variant="primary" className="bg-white text-emerald-700 hover:bg-slate-100">Contact Us</Button>
-              <Button variant="outline" className="border-white/30 bg-transparent text-white hover:bg-white/10">
+              <Button variant="primary" className="bg-white text-emerald-700 hover:bg-slate-100 dark:bg-slate-100 dark:text-emerald-700 dark:hover:bg-white">Contact Us</Button>
+              <Button variant="outline" className="border-white/60 bg-transparent text-white hover:bg-white/10 dark:border-slate-400 dark:text-slate-100 dark:hover:bg-slate-800/60">
                 Learn More
                 <ArrowRight size={16} />
               </Button>

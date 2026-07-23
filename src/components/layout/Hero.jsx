@@ -43,7 +43,7 @@ function Hero() {
 
         <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} className="relative">
           <div className="absolute inset-0 rounded-[32px] bg-gradient-to-br from-emerald-400/20 to-sky-400/20 blur-2xl" />
-          <Card className="relative grid gap-4 rounded-[32px] bg-white/80 p-4 backdrop-blur">
+          <Card className="relative grid gap-4 rounded-[32px] bg-white/80 p-4 backdrop-blur dark:bg-slate-900/80">
             <div className="grid gap-4 md:grid-cols-2">
               {floatingCards.map((item, index) => {
                 const Icon = item.icon
@@ -53,13 +53,13 @@ function Hero() {
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: index * 0.08 }}
-                    className="rounded-[20px] border border-slate-200 bg-slate-50 p-4"
+                    className="rounded-[20px] border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-800/70"
                   >
                     <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-500 text-white">
                       <Icon size={18} />
                     </div>
-                    <p className="text-xs text-slate-500">{item.label}</p>
-                    <p className="mt-1 text-lg font-semibold text-slate-900">{item.value}</p>
+                    <p className="text-xs text-slate-500 dark:text-slate-400">{item.label}</p>
+                    <p className="mt-1 text-lg font-semibold text-slate-900 dark:text-white">{item.value}</p>
                   </motion.div>
                 )
               })}

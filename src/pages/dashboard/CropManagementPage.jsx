@@ -16,7 +16,7 @@ const defaultCropForm = {
   recommendedPh: '6.2',
   minerals: 'Nitrogen, Potassium',
   compatibleSoils: 'Loam, Clay',
-  recommendedDevice: 'AquaPulse',
+  recommendedDevice: 'WaterWind Micro',
   status: 'Active',
 }
 

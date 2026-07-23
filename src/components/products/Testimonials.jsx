@@ -35,14 +35,14 @@ function Testimonials() {
               viewport={{ once: true, amount: 0.25 }}
               transition={{ delay: index * 0.06 }}
             >
-              <Card className="h-full rounded-[24px] bg-white/85">
+              <Card className="h-full rounded-[24px] bg-white/85 dark:bg-slate-900/85">
                 <div className="flex items-center gap-3">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-sky-500 text-sm font-bold text-white">
                     {item.name.slice(0, 1)}
                   </div>
                   <div>
-                    <p className="font-semibold text-slate-900">{item.name}</p>
-                    <p className="text-sm text-slate-500">{item.country}</p>
+                    <p className="font-semibold text-slate-900 dark:text-white">{item.name}</p>
+                    <p className="text-sm text-slate-500 dark:text-slate-400">{item.country}</p>
                   </div>
                 </div>
 
@@ -52,7 +52,7 @@ function Testimonials() {
                   ))}
                 </div>
 
-                <p className="mt-4 text-sm leading-6 text-slate-600">“{item.review}”</p>
+                <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-300">“{item.review}”</p>
               </Card>
             </motion.div>
           ))}

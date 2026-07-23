@@ -29,12 +29,12 @@ function CoreValues() {
                 transition={{ delay: index * 0.05 }}
                 whileHover={{ y: -6 }}
               >
-                <Card className="h-full rounded-[24px] border border-transparent bg-gradient-to-br from-white to-emerald-50/60 p-6">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-white">
+                <Card className="h-full rounded-[24px] border border-transparent bg-gradient-to-br from-white to-emerald-50/60 p-6 dark:from-slate-900 dark:to-slate-800/80">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-white dark:bg-slate-700">
                     <Icon size={18} />
                   </div>
-                  <h3 className="mt-4 text-lg font-semibold text-slate-900">{value.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">{value.description}</p>
+                  <h3 className="mt-4 text-lg font-semibold text-slate-900 dark:text-white">{value.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">{value.description}</p>
                 </Card>
               </motion.div>
             )

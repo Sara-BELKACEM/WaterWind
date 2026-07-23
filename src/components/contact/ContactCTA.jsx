@@ -14,11 +14,11 @@ function ContactCTA() {
               Discover how WaterWind can support cleaner water access, stronger crop performance, and smarter resource planning.
             </p>
             <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Button variant="primary">
+              <Button variant="primary" className="!bg-white !text-emerald-700 hover:!bg-slate-100">
                 Explore Products
                 <ArrowRight size={15} />
               </Button>
-              <Button variant="outline" className="bg-white/10 text-white hover:bg-white/15">
+              <Button variant="outline" className="!border-white/80 !bg-white/10 !text-white hover:!bg-white/15">
                 Learn More
               </Button>
             </div>

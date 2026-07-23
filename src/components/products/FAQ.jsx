@@ -29,13 +29,13 @@ function FAQ() {
     <section className="py-20">
       <Container className="mx-auto max-w-4xl space-y-4">
         {faqs.map((faq, index) => (
-          <div key={faq.question} className="rounded-[20px] border border-slate-200 bg-white p-4 shadow-sm">
+          <div key={faq.question} className="rounded-[20px] border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900/90">
             <button
               type="button"
               onClick={() => setOpenIndex((prev) => (prev === index ? -1 : index))}
               className="flex w-full items-center justify-between gap-4 text-left"
             >
-              <span className="font-semibold text-slate-900">{faq.question}</span>
+              <span className="font-semibold text-slate-900 dark:text-white">{faq.question}</span>
               <ChevronDown className={`transition ${openIndex === index ? 'rotate-180' : ''}`} size={18} />
             </button>
 
@@ -47,7 +47,7 @@ function FAQ() {
                   exit={{ height: 0, opacity: 0 }}
                   className="overflow-hidden"
                 >
-                  <p className="pt-4 text-sm leading-6 text-slate-600">{faq.answer}</p>
+                  <p className="pt-4 text-sm leading-6 text-slate-600 dark:text-slate-300">{faq.answer}</p>
                 </motion.div>
               ) : null}
             </AnimatePresence>

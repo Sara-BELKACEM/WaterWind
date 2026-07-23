@@ -12,10 +12,10 @@ function CTA() {
               Turn crop conditions, soil health, and climate signals into fast, practical water recommendations for every field.
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-              <Button variant="primary" className="bg-white text-emerald-700 hover:bg-slate-100">
+              <Button variant="primary" className="!bg-white !text-emerald-700 hover:!bg-slate-100">
                 Start Analysis
               </Button>
-              <Button variant="outline" className="border-white/30 bg-transparent text-white hover:bg-white/10">
+              <Button variant="outline" className="!border-white/80 !bg-transparent !text-white hover:!bg-white/10">
                 Learn More
                 <ArrowRight size={16} />
               </Button>

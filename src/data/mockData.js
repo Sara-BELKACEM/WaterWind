@@ -36,7 +36,7 @@ export const crops = [
     recommendedPh: '6.1',
     minerals: ['Nitrogen', 'Phosphorus', 'Potassium'],
     compatibleSoils: ['Loam', 'Sandy Loam'],
-    recommendedDevice: 'AquaPulse',
+    recommendedDevice: 'WaterWind Micro',
     status: 'Active',
   },
   {
@@ -46,7 +46,7 @@ export const crops = [
     recommendedPh: '6.4',
     minerals: ['Calcium', 'Magnesium', 'Potassium'],
     compatibleSoils: ['Clay Loam', 'Loam'],
-    recommendedDevice: 'DripSmart',
+    recommendedDevice: 'WaterWind Pro',
     status: 'Active',
   },
   {
@@ -56,7 +56,7 @@ export const crops = [
     recommendedPh: '5.8',
     minerals: ['Nitrogen', 'Zinc', 'Sulfur'],
     compatibleSoils: ['Clay', 'Silt'],
-    recommendedDevice: 'FlowSense',
+    recommendedDevice: 'WaterWind Micro',
     status: 'Active',
   },
   {
@@ -66,7 +66,7 @@ export const crops = [
     recommendedPh: '6.3',
     minerals: ['Nitrogen', 'Phosphorus'],
     compatibleSoils: ['Loam', 'Clay Loam'],
-    recommendedDevice: 'SoilJet',
+    recommendedDevice: 'WaterWind Pro',
     status: 'Inactive',
   },
   {
@@ -76,7 +76,7 @@ export const crops = [
     recommendedPh: '6.5',
     minerals: ['Nitrogen', 'Calcium'],
     compatibleSoils: ['Loam', 'Organic'],
-    recommendedDevice: 'AquaPulse',
+    recommendedDevice: 'WaterWind Micro',
     status: 'Active',
   },
   {
@@ -86,7 +86,7 @@ export const crops = [
     recommendedPh: '6.0',
     minerals: ['Potassium', 'Magnesium'],
     compatibleSoils: ['Sandy Loam', 'Loam'],
-    recommendedDevice: 'DripSmart',
+    recommendedDevice: 'WaterWind Pro',
     status: 'Active',
   },
   {
@@ -96,7 +96,7 @@ export const crops = [
     recommendedPh: '5.9',
     minerals: ['Nitrogen', 'Phosphorus', 'Sulfur'],
     compatibleSoils: ['Silt', 'Loam'],
-    recommendedDevice: 'FlowSense',
+    recommendedDevice: 'WaterWind Micro',
     status: 'Inactive',
   },
   {
@@ -106,7 +106,7 @@ export const crops = [
     recommendedPh: '6.2',
     minerals: ['Calcium', 'Potassium'],
     compatibleSoils: ['Sandy Loam', 'Loam'],
-    recommendedDevice: 'SoilJet',
+    recommendedDevice: 'WaterWind Pro',
     status: 'Active',
   },
   {
@@ -116,7 +116,7 @@ export const crops = [
     recommendedPh: '6.4',
     minerals: ['Nitrogen', 'Potassium'],
     compatibleSoils: ['Clay Loam', 'Loam'],
-    recommendedDevice: 'AquaPulse',
+    recommendedDevice: 'WaterWind Micro',
     status: 'Active',
   },
   {
@@ -126,7 +126,7 @@ export const crops = [
     recommendedPh: '6.3',
     minerals: ['Nitrogen', 'Sulfur'],
     compatibleSoils: ['Loam', 'Sandy Loam'],
-    recommendedDevice: 'DripSmart',
+    recommendedDevice: 'WaterWind Pro',
     status: 'Active',
   },
 ]
