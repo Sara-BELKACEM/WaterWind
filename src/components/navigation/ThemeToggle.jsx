@@ -27,6 +27,7 @@ function ThemeToggle() {
     <motion.div whileTap={{ scale: 0.96 }}>
       <Button
         variant="ghost"
+        aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
         onClick={toggleTheme}
         className="rounded-[18px] border border-slate-200 bg-white/70 dark:border-slate-700 dark:bg-slate-900/70"
       >

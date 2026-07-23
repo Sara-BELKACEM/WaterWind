@@ -18,16 +18,16 @@ function UserMenu() {
           <span className="h-2 w-2 rounded-full bg-emerald-500" />
           Online
         </span>
-        <Button variant="ghost" className="rounded-xl p-2">
+        <Button variant="ghost" aria-label="Open user menu" className="rounded-xl p-2">
           <ChevronDown size={16} />
         </Button>
       </div>
 
       <div className="hidden items-center gap-1 lg:flex">
-        <Button variant="ghost" className="rounded-xl p-2">
+        <Button variant="ghost" aria-label="Open settings" className="rounded-xl p-2">
           <Settings size={16} />
         </Button>
-        <Button variant="ghost" className="rounded-xl p-2">
+        <Button variant="ghost" aria-label="Log out" className="rounded-xl p-2">
           <LogOut size={16} />
         </Button>
       </div>

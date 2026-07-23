@@ -2,6 +2,7 @@ import { NavLink, Outlet } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Droplets, Menu } from 'lucide-react'
 import { publicLinks, publicMetadata } from '../constants/navigation'
+import Footer from '../components/layout/Footer'
 import { Button, Container } from '../components/ui'
 
 function PublicLayout() {
@@ -46,6 +47,8 @@ function PublicLayout() {
       <motion.main initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="py-8">
         <Outlet />
       </motion.main>
+
+      <Footer />
     </div>
   )
 }

@@ -5,6 +5,7 @@ import PlaceholderPage from '../pages/PlaceholderPage'
 import DashboardHomePage from '../pages/dashboard/DashboardHomePage'
 import CropManagementPage from '../pages/dashboard/CropManagementPage'
 import SoilManagementPage from '../pages/dashboard/SoilManagementPage'
+import WaterAnalysisPage from '../pages/dashboard/WaterAnalysisPage'
 import HomePage from '../pages/public/HomePage'
 import ProductsPage from '../pages/public/ProductsPage'
 import AboutPage from '../pages/public/AboutPage'
@@ -50,8 +51,9 @@ function AppRoutes() {
         <Route path="/dashboard" element={<DashboardHomePage />} />
         <Route path="/dashboard/crops" element={<CropManagementPage />} />
         <Route path="/dashboard/soils" element={<SoilManagementPage />} />
+        <Route path="/dashboard/analysis" element={<WaterAnalysisPage />} />
         {dashboardRoutes
-          .filter((route) => route.path !== '/dashboard' && route.path !== '/dashboard/crops' && route.path !== '/dashboard/soils')
+          .filter((route) => route.path !== '/dashboard' && route.path !== '/dashboard/crops' && route.path !== '/dashboard/soils' && route.path !== '/dashboard/analysis')
           .map((route) => (
             <Route
               key={route.path}

@@ -4,7 +4,6 @@ import ContactForm from '../../components/contact/ContactForm'
 import ContactHero from '../../components/contact/ContactHero'
 import ContactInfo from '../../components/contact/ContactInfo'
 import FAQPreview from '../../components/contact/FAQPreview'
-import Footer from '../../components/layout/Footer'
 import { Container } from '../../components/ui'
 
 function ContactPage() {
@@ -22,7 +21,6 @@ function ContactPage() {
       <ContactCards />
       <FAQPreview />
       <ContactCTA />
-      <Footer />
     </div>
   )
 }

@@ -14,6 +14,7 @@ function Topbar({ onMenuClick, onToggleSidebar, collapsed = false }) {
           <motion.button
             whileTap={{ scale: 0.96 }}
             type="button"
+            aria-label="Open mobile dashboard menu"
             onClick={onMenuClick}
             className="rounded-[18px] border border-slate-200 bg-white p-2 text-slate-600 shadow-sm dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 lg:hidden"
           >
@@ -22,6 +23,7 @@ function Topbar({ onMenuClick, onToggleSidebar, collapsed = false }) {
 
           <button
             type="button"
+            aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
             onClick={onToggleSidebar}
             className="hidden rounded-[18px] border border-slate-200 bg-white p-2 text-slate-600 shadow-sm dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 lg:block"
           >

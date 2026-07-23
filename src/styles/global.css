@@ -40,8 +40,10 @@ body {
     animation: fade-in 0.35s ease-out;
   }
 
-  .text-balance {
-    text-wrap: balance;
+  @supports (text-wrap: balance) {
+    .text-balance {
+      text-wrap: balance;
+    }
   }
 }
 

@@ -37,6 +37,7 @@ function Sidebar({ collapsed = false, mobile = false, onClose, onToggle }) {
         {mobile ? (
           <button
             type="button"
+            aria-label="Close mobile sidebar"
             onClick={onClose}
             className="rounded-xl p-2 text-slate-500 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
           >
@@ -45,6 +46,7 @@ function Sidebar({ collapsed = false, mobile = false, onClose, onToggle }) {
         ) : (
           <button
             type="button"
+            aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
             onClick={onToggle}
             className="hidden rounded-xl p-2 text-slate-500 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800 lg:block"
           >

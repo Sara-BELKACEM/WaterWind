@@ -6,14 +6,11 @@ import Timeline from '../../components/products/Timeline'
 import Testimonials from '../../components/products/Testimonials'
 import FAQ from '../../components/products/FAQ'
 import ProductsCTA from '../../components/products/ProductsCTA'
-import Footer from '../../components/layout/Footer'
-import Navbar from '../../components/layout/Navbar'
 import { Container } from '../../components/ui'
 
 function ProductsPage() {
   return (
     <div className="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
-      <Navbar />
       <ProductsHero />
 
       <section className="py-20">
@@ -29,7 +26,6 @@ function ProductsPage() {
       <Testimonials />
       <FAQ />
       <ProductsCTA />
-      <Footer />
     </div>
   )
 }

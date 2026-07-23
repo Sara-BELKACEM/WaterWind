@@ -58,6 +58,7 @@ function Navbar() {
 
         <button
           type="button"
+          aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
           onClick={() => setMobileOpen((prev) => !prev)}
           className="rounded-2xl bg-slate-100 p-2 text-slate-700 md:hidden"
         >

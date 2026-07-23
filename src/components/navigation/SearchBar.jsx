@@ -6,6 +6,7 @@ function SearchBar({ placeholder = 'Search insights' }) {
       <Search size={15} />
       <input
         type="text"
+        aria-label="Search insights"
         placeholder={placeholder}
         className="w-44 bg-transparent text-sm outline-none placeholder:text-slate-400"
       />
