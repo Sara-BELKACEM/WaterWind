@@ -5,11 +5,33 @@ import { Button } from '../ui'
 function UserMenu() {
   const navigate = useNavigate()
 
+  const handleSettings = () => {
+    navigate('/dashboard/settings/profile')
+  }
+
   const handleLogout = () => {
     navigate('/')
   }
+
+  const handleProfileClick = () => {
+    handleSettings()
+  }
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault()
+      handleProfileClick()
+    }
+  }
+
   return (
-    <div className="flex items-center gap-3 rounded-[20px] border border-slate-200/80 bg-white/70 p-2 shadow-sm backdrop-blur dark:border-slate-700 dark:bg-slate-900/70">
+    <div
+      role="button"
+      tabIndex={0}
+      onClick={handleProfileClick}
+      onKeyDown={handleKeyDown}
+      className="flex cursor-pointer items-center gap-3 rounded-[20px] border border-slate-200/80 bg-white/70 p-2 shadow-sm transition hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 dark:border-slate-700 dark:bg-slate-900/70 dark:hover:bg-slate-800"
+    >
       <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-sky-500 text-sm font-bold text-white">
         O
       </div>
@@ -30,7 +52,7 @@ function UserMenu() {
       </div>
 
       <div className="hidden items-center gap-1 lg:flex">
-        <Button variant="ghost" aria-label="Open settings" className="rounded-xl p-2">
+        <Button variant="ghost" aria-label="Open settings" className="rounded-xl p-2" onClick={handleSettings}>
           <Settings size={16} />
         </Button>
         <Button variant="ghost" aria-label="Log out" className="rounded-xl p-2" onClick={handleLogout}>

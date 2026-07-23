@@ -35,6 +35,7 @@ function AppRoutes() {
         <Route path="/dashboard/history" element={<AnalysisHistoryPage />} />
         <Route path="/dashboard/statistics" element={<StatisticsPage />} />
         <Route path="/dashboard/settings" element={<SettingsPage />} />
+        <Route path="/dashboard/settings/:section" element={<SettingsPage />} />
         <Route path="*" element={<PlaceholderPage title="Page not found" />} />
       </Route>
     </Routes>

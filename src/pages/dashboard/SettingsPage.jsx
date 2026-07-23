@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Activity, CheckCircle2, Compass, Sparkles } from 'lucide-react'
 import { Badge, Card } from '../../components/ui'
@@ -24,9 +25,16 @@ const sectionMap = {
 }
 
 function SettingsPage() {
-  const [activeSection, setActiveSection] = useState('profile')
+  const { section } = useParams()
+  const [activeSection, setActiveSection] = useState(section ?? 'profile')
 
   const currentSection = useMemo(() => sectionMap[activeSection] ?? sectionMap.profile, [activeSection])
+
+  useMemo(() => {
+    if (section && sectionMap[section]) {
+      setActiveSection(section)
+    }
+  }, [section])
 
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 sm:px-6 lg:px-8">
